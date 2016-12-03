@@ -29,3 +29,7 @@ for (var i = 0; i < fraserFir.height; i++) {
     design += fraserFir.key.repeat ((2 * i) + 1);
     console.log(design)
 }
+
+if (fraserFir.height === "", fraserFir.key === ""){
+    alert("Can't leave anything blank! Please fill in both questions.");
+}
