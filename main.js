@@ -14,4 +14,12 @@ character.addEventListener("keypress", function() {
     };
 });
 
-grow.addEventListener("click");
+grow.addEventListener("click", xmas);
+
+var xmas = function () {
+    var fraserFir = {
+        height: document.getElementById("height").value,
+        key: document.getElementById("key").value,
+    }
+console.log(fraserFir.height, fraserFir.key)
+}
