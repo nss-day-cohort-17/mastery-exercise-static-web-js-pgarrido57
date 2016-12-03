@@ -21,5 +21,11 @@ var xmas = function () {
         height: document.getElementById("height").value,
         key: document.getElementById("key").value,
     }
-console.log(fraserFir.height, fraserFir.key)
+console.log(fraserFir.height, fraserFir.key);
+}
+
+for (var i = 0; i < fraserFir.height; i++) {
+    var design = " ".repeat(fraserFir.height - i);
+    design += fraserFir.key.repeat ((2 * i) + 1);
+    console.log(design)
 }
