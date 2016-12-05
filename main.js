@@ -18,7 +18,7 @@ var xmas = function(tree) {
   tree.height = pineHieght.value
   tree.key = character.value
   for (var i = 0; i < tree.height; i++) {
-  var design = "".repeat(tree.height - i);
+  var design = " ".repeat(tree.height - i);
   design += tree.key.repeat((2 * i) + 1);
   console.log(design);
 }
