@@ -12,7 +12,7 @@ function growTree() {
 }
 
 var xmas = function(tree) {
-  if (pineHieght.value === "", character.value === "") {
+  if (pineHieght.value === "" || character.value === "") {
     alert("Can't leave anything blank! Please fill in both questions.");
   }
   tree.height = pineHieght.value
