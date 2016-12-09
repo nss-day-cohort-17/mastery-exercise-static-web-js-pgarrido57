@@ -2,11 +2,6 @@ var pineHieght = document.getElementById("pineHieght");
 var character = document.getElementById("character");
 var grow = document.getElementById("grow");
 
-var fraserFir = {
-  height: "",
-  key: "",
-}
-
 function growTree() {
   xmas(fraserFir)
 }
@@ -26,13 +21,13 @@ var xmas = function(tree) {
 
 pineHieght.addEventListener("keypress", function() {
   if (event.keyCode === 13) {
-    grow.click();
+    grow.click(fraserFir);
   };
 });
 
 character.addEventListener("keypress", function() {
   if (event.keyCode === 13) {
-    grow.click();
+    grow.click(fraserFir);
   };
 });
 
