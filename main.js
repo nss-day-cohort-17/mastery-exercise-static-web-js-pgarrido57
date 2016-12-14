@@ -1,33 +1,36 @@
-var pineHieght = document.getElementById("pineHieght");
+var pineHeight = document.getElementById("pineHeight");
 var character = document.getElementById("character");
 var grow = document.getElementById("grow");
 
 function growTree() {
+  var fraserFir = {
+    height: document.getElementById("pineHeight").value,
+    key: document.getElementById("character").value,
+  }
   xmas(fraserFir)
 }
 
 var xmas = function(tree) {
-  if (pineHieght.value === "" || character.value === "") {
+  if (pineHeight.value === "" || character.value === "") {
     alert("Can't leave anything blank! Please fill in both questions.");
-  }
-  tree.height = pineHieght.value
-  tree.key = character.value
+  }else{
   for (var i = 0; i < tree.height; i++) {
     var design = " ".repeat(tree.height - i);
     design += tree.key.repeat((2 * i) + 1);
     console.log(design);
+    }
   }
 }
 
-pineHieght.addEventListener("keypress", function() {
+pineHeight.addEventListener("keypress", function() {
   if (event.keyCode === 13) {
-    grow.click(fraserFir);
+    growTree();
   };
 });
 
 character.addEventListener("keypress", function() {
   if (event.keyCode === 13) {
-    grow.click(fraserFir);
+    growTree();
   };
 });
 
